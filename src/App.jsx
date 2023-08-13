@@ -1,11 +1,9 @@
-import { useState } from 'react'
-
-import './App.css'
+import { useState } from "react";
+import Nav from "./components/Nav";
+import "./App.css";
 
 function App() {
-
-  return (
-
+  return <Nav />;
 }
 
-export default App
+export default App;
