@@ -1,26 +1,41 @@
+/* styles/About.css */
+.about-container {
+  margin: 1%;
+}
+
+.photo-container {
+  align-items: flex-end;
+}
+
+.about-me-photo {
+  max-width: 100%;
+  height: auto;
+}
 
 
-  .about-container{
-    margin: 1%;
-  }
-  .photo-container {
-    align-items: flex-end;
-  }
-  .about-me-photo {
-    max-width: 100%;
-    height: auto;
- 
-    
-  }
+.about-text {
+  text-align: justify;
+}
 
-  .row {
-    display: flex;
-    align-items: stretch; /* Align columns to have the same height */
-  }
-  
-  .about-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: justify;
-  }
+/* Overlay styles */
+.overlay-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.overlay-about-photo {
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}

@@ -1,11 +1,13 @@
+import React from 'react';
+
 import "../../styles/About.css";
-function About() {
+function ColumnAbout() {
   return (
     <div className="row align-items-start about-container">
-      <div className="col-12 col-md-3 photo-container">
+      <div className="col-md-3 col-12 photo-container">
         <img className="about-me-photo" src="assets/Portrait.JPG" />
       </div>
-      <div className="col-12 col-md-9">
+      <div className="col-md-9 col-12">
        
           <p className="about-text">
             Hello, and welcome! My name is Hailey. I am an MCU enthusiast,
@@ -30,4 +32,4 @@ function About() {
   );
 }
 
-export default About;
+export default ColumnAbout;
