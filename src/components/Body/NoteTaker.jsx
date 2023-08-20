@@ -1,6 +1,7 @@
-import React from "react";
-
-function NoteTaker() {
+import React, {useRef} from "react";
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+function NoteTaker({ onMenuItemClick }) {
   return (
     <div className="card">
       <div className="carousel-item active">
@@ -35,4 +36,22 @@ function NoteTaker() {
     </div>
   );
 }
-export default NoteTaker;
+
+function NoteTakerRightMenu({onMenuItemClick, setIndex  }) {
+
+  return (
+  
+    <>
+    <Navbar className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="" className="NoteTaker" onClick={() => setIndex(0)}>Note Taker</Navbar.Brand>
+      </Container>
+    </Navbar>
+    
+    </>
+  );
+  }
+export  {NoteTaker, NoteTakerRightMenu};
+
+
+

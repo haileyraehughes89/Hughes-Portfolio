@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useRef} from "react";
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
 
-function EmployeeDb() {
+function EmployeeDb({ onMenuItemClick }) {
   return (
     <div className="card">
       <div className="carousel-item active">
@@ -82,5 +84,18 @@ function EmployeeDb() {
     </div>
   );
 }
+function EmployeeDbRightMenu({onMenuItemClick, setIndex  }) {
 
-export default EmployeeDb;
+  return (
+  
+    <>
+    <Navbar className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="" class="EmployeeDb" onClick={() => setIndex(1)}>Employee Database</Navbar.Brand>
+      </Container>
+    </Navbar>
+    
+    </>
+  );
+  }
+export  {EmployeeDb, EmployeeDbRightMenu};

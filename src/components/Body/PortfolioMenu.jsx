@@ -44,4 +44,4 @@ function TopMenu () {
         <div>link alternate</div>
         );
     }
-    export {TopMenu, RightMenu};
+    export default TopMenu;

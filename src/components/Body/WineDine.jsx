@@ -1,8 +1,8 @@
-import React from "react";
+import React, {useRef} from "react";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 
-function WineDine() {
+function WineDine({ onMenuItemClick }) {
   return (
     <div className="card">
       <div className="carousel-item active">
@@ -54,16 +54,18 @@ function WineDine() {
   );
 }
 
-function WineDineRightMenu() {
+function WineDineRightMenu({onMenuItemClick, setIndex  }) {
+
 return (
+
   <>
   <Navbar className="bg-body-tertiary">
     <Container>
-      <Navbar.Brand href="#home" class="WineDine">Wining And Dining</Navbar.Brand>
+      <Navbar.Brand href="" class="WineDine" onClick={() => setIndex(2)}>Wining And Dining</Navbar.Brand>
     </Container>
   </Navbar>
   
   </>
 );
 }
-export {WineDine, WineDineRightMenu};
+export { WineDine, WineDineRightMenu };

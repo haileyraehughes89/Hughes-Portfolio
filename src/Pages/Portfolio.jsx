@@ -1,12 +1,13 @@
-import { useState } from "react";
+import React, { useState, useRef } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useMediaQuery } from "react-responsive";
-import NoteTaker from "../components/Body/NoteTaker";
-import EmployeeDb from "../components/Body/EmployeeDB";
+import {NoteTaker, NoteTakerRightMenu} from "../components/Body/NoteTaker";
+import {EmployeeDb, EmployeeDbRightMenu} from "../components/Body/EmployeeDB";
 import { WineDine, WineDineRightMenu } from "../components/Body/WineDine";
-import { RightMenu, TopMenu } from "../components/Body/PortfolioMenu";
+
+import TopMenu from "../components/Body/PortfolioMenu"; 
 import "../styles/Portfolio.css";
 
 function Portfolio() {
@@ -14,32 +15,36 @@ function Portfolio() {
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
-
-    const handleMenuItemClick = (index) => {
-      handleCarouselChange(index);
-    };
   };
 
   const isMediumScreen = useMediaQuery({ query: "(min-width: 768px)" });
 
+  const handleMenuItemClick = (newIndex) => {
+    setIndex(newIndex);
+  };
+
   return (
     <Row className="PortfolioContainer">
-      <Col md={9} xs={12} className="p-2">
+      <Col md={8} xs={12} className="p-2">
         <Carousel activeIndex={index} onSelect={handleSelect}>
           <Carousel.Item>
-            <NoteTaker />
+            <NoteTaker onMenuItemClick={handleMenuItemClick} />
           </Carousel.Item>
           <Carousel.Item>
-            <EmployeeDb />
+            <EmployeeDb onMenuItemClick={handleMenuItemClick} />
           </Carousel.Item>
           <Carousel.Item>
-            <WineDine />
+            <WineDine onMenuItemClick={handleMenuItemClick} />
           </Carousel.Item>
         </Carousel>
       </Col>
-      <Col md={3} xs={12} className="order-md-first">
+      <Col md={4} xs={12} className="order-md-first">
         {!isMediumScreen && <TopMenu />}
-        {isMediumScreen && <WineDineRightMenu />}
+        {isMediumScreen &&   (<>
+            <WineDineRightMenu onMenuItemClick={handleMenuItemClick} setIndex={setIndex} />
+            <EmployeeDbRightMenu onMenuItemClick={handleMenuItemClick} setIndex={setIndex} />
+            <NoteTakerRightMenu onMenuItemClick={handleMenuItemClick} setIndex={setIndex} />
+          </>)}
       </Col>
     </Row>
   );
