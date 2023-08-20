@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from "./App.jsx";
 import ColumnAbout from "./components/Body/ColumnAbout";
-import Projects from "./components/Body/Projects"
+import Portfolio from "./Pages/Portfolio"
 import Contact from "./components/Body/Contact"
 import Resume from "./Pages/Resume"
 import "./index.css";
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
         element: <ColumnAbout />,
       },
       {
-        path: '/Projects',
-        element: <Projects />,
+        path: '/Portfolio',
+        element: <Portfolio />,
       },
       {
         path: '/Contact',
