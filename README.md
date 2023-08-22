@@ -36,6 +36,12 @@ This React Portfolio is designed to provide an engaging and user-friendly experi
 
 
 
+https://github.com/haileyraehughes89/Hughes-Portfolio/assets/127250721/9b0dcdb6-d0b6-4687-b8b3-2f6c3ae5968e
+
+## Deployed Application
+
+https://incredible-lollipop-8b5c87.netlify.app/
+
 ## Technologies
 
 - React.js
