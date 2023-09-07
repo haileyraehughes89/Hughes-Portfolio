@@ -4,11 +4,12 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import "../../styles/NavStyle.css"
 
 function Menu() {
   const currentPage = useLocation().pathname;
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand" href="#" id="text">
           Hailey Hughes
