@@ -1,11 +1,11 @@
 import React from "react";
-
-import "../../styles/SmallAbout.css";
-
-
+// import Data from "../Data/Data"
+import "../styles/About.css";
 
 
-function LargeAbout() {
+
+
+function About() {
   return (
     <div className="background-container">
       
@@ -25,4 +25,4 @@ function LargeAbout() {
   );
 }
 
-export default LargeAbout;
+export default About;

@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import App from "./App.jsx";
-import LargeAbout from "./components/Body/LargeAbout";
+import About from "./Pages/About";
 import Portfolio from "./Pages/Portfolio";
 import Resume from "./Pages/Resume";
 import "./index.css";
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {path: "/",
-    element: <LargeAbout />},
+    element: <About />},
    
       {
         path: "/Portfolio",
