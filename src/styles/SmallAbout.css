@@ -4,7 +4,7 @@ img {
 }
 
 p {
-    text-align: justify
+    text-align: justify;
 }
 
 .parallax-header{
@@ -23,6 +23,45 @@ p {
 
    
 }
+
+.background-container {
+    background: #000;
+height: 100vh;
+   background: 
+   linear-gradient(
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.8)
+   ),
+   url(assets/AboutBG.svg);
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   align-content: center;
+   align-items: center;
+  
+  
+}
+
+.md-background-container {
+    background: #000;
+height: 100vh;
+   background: 
+   linear-gradient(
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.8)
+   ),
+   url(assets/AboutBG.svg);
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: fixed;
+  
+  
+}
+
 
 .header-content {
     padding: 100px 0 150px 0;
@@ -44,4 +83,17 @@ p {
 .content .right {
     
     padding: 0;
+}
+
+.lg-container{
+    padding: 15%;
+   
+}
+.md-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 0%;
+   
 }
