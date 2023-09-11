@@ -5,9 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App.jsx";
 import LargeAbout from "./components/Body/LargeAbout";
 import Portfolio from "./Pages/Portfolio";
-import Contact from "./components/Body/Contact";
 import Resume from "./Pages/Resume";
-import SmallAbout from "./components/Body/smallAbout";
 import "./index.css";
 const router = createBrowserRouter([
   {
@@ -15,6 +13,8 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Error />,
     children: [
+      {path: "/",
+    element: <LargeAbout />},
    
       {
         path: "/Portfolio",

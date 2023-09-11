@@ -1,20 +1,54 @@
-nav {
-  width: 100%;
-  position: fixed;
-  color: red
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Sacramento&display=swap');
+.header {
+  background-color: rgba(89, 122, 113, 1);
+  height: 10vh;
 }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  width: 0;
+
+}
+
 
 .fixed-bottom {
-  background-color: white;
-  position: fixed;
+  background-color: rgba(89, 122, 113, 0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-@media (max-width: 712px) {
-  /* Apply fixed positioning for medium (md) screens and up */
-  .fixed-bottom {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+
+
+a.nav-link {
+  color:rgb(195, 205, 201);
+  font-size: 4vh;
+  font-family: 'Dosis', sans-serif;
+}
+
+.navbar-nav {
+  padding-left:2vh;
+  padding-right: 2vh;
+}
+
+.navbar-nav .nav-link.active {
+  color: rgb(236, 233, 240)
+}
+#name-text {
+  color:rgb(195, 205, 201);
+  font-family: "Sacramento", cursive;
+  font-size: 5vh;
+}
+
+
+
+#navbarNavDropdown {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-family: "Sacramento", cursive;
+  color: rgb(182, 83, 95);
 }
