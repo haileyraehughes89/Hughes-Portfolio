@@ -38,10 +38,28 @@ a.nav-link {
 .navbar-nav .nav-link.active {
   color: rgb(236, 233, 240)
 }
+
 #name-text {
   color:rgb(195, 205, 201);
   font-family: "Sacramento", cursive;
   font-size: 5vh;
+}
+
+@media screen {
+  a.nav-link {
+    color: rgb(89, 122, 113);
+    font-size: 4vh;
+    font-family: 'Dosis', sans-serif;
+    justify-content: flex-end;
+    text-align: end;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+  }
+
+  .navbar-nav .nav-link.active {
+    color: rgb(175, 81, 62);
+    text-shadow: 2px 2px 4px rgba(175, 81, 62, 0.5)
+  }
+  
 }
 
 
