@@ -1,3 +1,6 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Sacramento&family=Urbanist:wght@100&display=swap');
+
 img {
     width: 90%;
     position: left
@@ -5,6 +8,11 @@ img {
 
 p {
     text-align: justify;
+}
+
+.card {
+width: 75vw;
+font-family: 'Urbanist', sans-serif;
 }
 
 .parallax-header{
@@ -40,6 +48,7 @@ height: 100vh;
    display: flex;
    align-content: center;
    align-items: center;
+   justify-content: center;
   
   
 }

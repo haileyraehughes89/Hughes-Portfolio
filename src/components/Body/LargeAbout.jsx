@@ -1,6 +1,9 @@
 import React from "react";
-
-import "../../styles/SmallAbout.css";
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import About from "../../Data/Data"
+import "../../styles/About.css";
 
 
 
@@ -9,18 +12,18 @@ function LargeAbout() {
   return (
     <div className="background-container">
       
-      
-      <div className="lg-container">
-        <div className="content row">
-          <div className="col-md-8 left">
-            <h1 className="text-center">Hello and Welcome!</h1>
-            
-          </div>
-          <div className="col-md-4 right" >
-            <img src="assets/smallAbout.JPG" className="w-100"></img>
-          </div>
-        </div>
-      </div>
+      <Card className="card">
+      <Card.Body>
+        <Row>
+          <Col sm={8}>
+          {About.text}
+          </Col>
+          <Col sm={4}>
+          <Card.Img src="assets/About.JPG"/>
+          </Col>
+        </Row>
+      </Card.Body>
+    </Card>
     </div>
   );
 }
