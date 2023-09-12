@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "../../styles/NavStyle.css";
 
@@ -10,13 +11,13 @@ import "../../styles/NavStyle.css";
 function Menu() {
   const currentPage = useLocation().pathname;
   return (
-    <Navbar expand="lg" className="header fixed-top">
+    <Navbar collapseOnSelect expand="lg" className="header fixed-top">
       <Container fluid>
         <Navbar.Brand as={Link} to="/" id="name-text">
           Hailey Rae
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarNavDropdown" />
-        <Navbar.Collapse id="navbarNavDropdown">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav"  />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="navbar-nav">
             <Nav.Item>
               <Link

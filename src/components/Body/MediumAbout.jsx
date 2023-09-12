@@ -1,5 +1,6 @@
 import React from "react";
-
+import Card from 'react-bootstrap/Card';
+import About from "../../Data/Data"
 import "../../styles/About.css";
 
 
@@ -9,18 +10,15 @@ function MediumAbout() {
   return (
     <div className="background-container">
       
-      
-      <div className="lg-container">
-        <div className="content row">
-          <div className="col-md-8 left">
-            <h1 className="text-center">Medium</h1>
-            
-          </div>
-          <div className="col-md-4 right" >
-            <img src="assets/smallAbout.JPG" className="w-100"></img>
-          </div>
-        </div>
-      </div>
+      <Card className="card" style={{marginTop: "3.5em"}}>
+      <Card.Img style={{width: "15em", marginTop: "2em"}}variant="top" src="assets/About.JPG" />
+      <Card.Body>
+        <Card.Title className="welcome" style={{marginTop: "0em"}}>{About.welcome}</Card.Title>
+        <Card.Text className="text" style={{fontSize: "1.1em"}}>
+          {About.text}
+        </Card.Text>
+      </Card.Body>
+    </Card>
     </div>
   );
 }

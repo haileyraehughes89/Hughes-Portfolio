@@ -18,6 +18,7 @@ p {
   width: 75vw;
   font-family: "Urbanist", sans-serif;
   background-color: rgba(195, 205, 201,0.9);
+  align-items: center;
 }
 
 .text {
