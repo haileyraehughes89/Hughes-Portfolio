@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import About from "../../Data/Data";
+import {About} from "../../Data/Data";
 import "../../styles/About.css";
 
 function LargeAbout() {

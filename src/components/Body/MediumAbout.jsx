@@ -1,6 +1,6 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
-import About from "../../Data/Data"
+import {About} from "../../Data/Data"
 import "../../styles/About.css";
 
 

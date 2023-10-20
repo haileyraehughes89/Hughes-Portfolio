@@ -1,53 +1,38 @@
-import React, { useState, useRef } from "react";
-import Carousel from "react-bootstrap/Carousel";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import {NoteTaker, NoteTakerRightMenu} from "../components/Body/NoteTaker";
-import {EmployeeDb, EmployeeDbRightMenu} from "../components/Body/EmployeeDB";
-import { WineDine, WineDineRightMenu } from "../components/Body/WineDine";
-
-import TopMenu from "../components/Body/PortfolioMenu"; 
+import SmallPortfolio from "../components/Portfolio/SmallPortfolio"
+import MediumPortfolio from "../components/Portfolio/MediumPortfolio"
+import LargePortfolio from "../components/Portfolio/LargePortfolio";
 import "../styles/Portfolio.css";
 
 function Portfolio() {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
-
-  const isMediumScreen = useMediaQuery({ query: "(min-width: 768px)" });
-
-  const handleMenuItemClick = (newIndex) => {
-    setIndex(newIndex);
-  };
-
-  return (
-    <Row className="PortfolioContainer">
-      <Col md={8} xs={12} className="p-2">
-        <Carousel activeIndex={index} onSelect={handleSelect}>
-          <Carousel.Item>
-            <NoteTaker onMenuItemClick={handleMenuItemClick} />
-          </Carousel.Item>
-          <Carousel.Item>
-            <EmployeeDb onMenuItemClick={handleMenuItemClick} />
-          </Carousel.Item>
-          <Carousel.Item>
-            <WineDine onMenuItemClick={handleMenuItemClick} />
-          </Carousel.Item>
-        </Carousel>
-      </Col>
-      <Col md={4} xs={12} className="order-md-first">
-        {!isMediumScreen && <TopMenu />}
-        {isMediumScreen &&   (<>
-            <WineDineRightMenu onMenuItemClick={handleMenuItemClick} setIndex={setIndex} />
-            <EmployeeDbRightMenu onMenuItemClick={handleMenuItemClick} setIndex={setIndex} />
-            <NoteTakerRightMenu onMenuItemClick={handleMenuItemClick} setIndex={setIndex} />
-          </>)}
-      </Col>
-    </Row>
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 767);
+  const [isMediumScreen, setIsMediumScreen] = useState(
+    window.innerWidth <= 912
   );
+  const handleResize = () => {
+    setIsSmallScreen(window.innerWidth <= 767);
+    setIsMediumScreen(window.innerWidth <= 912);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const renderPage = () => {
+    if (isSmallScreen) {
+      return <SmallPortfolio />;
+    }
+    if (isMediumScreen) {
+      return <MediumPortfolio />;
+    } else {
+      return <LargePortfolio />;
+    }
+  };
+  return <div className="PortfolioContainer">{renderPage()}</div>
 }
 
 export default Portfolio;
