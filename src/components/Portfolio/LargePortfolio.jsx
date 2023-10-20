@@ -6,9 +6,10 @@ import "../../styles/Portfolio.css"
 
 function LargePortfolio() {
   return (
-    <Row md={3} className="Row">
+    <Row md={2} className="Row">
       {Portfolio.map((item, index) => (
         <Col key={index} className="Col">
+          <a href={item.link}>
           <Card class="Card">
             <Card.Img variant="top" src={item.img} class="CardImg"/>
             <Card.Body>
@@ -16,6 +17,7 @@ function LargePortfolio() {
               
             </Card.Body>
           </Card>
+          </a>
         </Col>
       ))}
     </Row>
